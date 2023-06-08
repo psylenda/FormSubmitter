@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+    
+    <head>
+        <meta charset="utf-8">
+        <title>Form Submission</title>
+
+    </head>
+
+    <body>
+        <h1>Please Submit Your Information</h1>
+        <form id = "userInput" onsubmit ="handleSubmit()">
+            First Name<input type="text" id = "fnInput" name = "txtName"> <br>
+            Last Name<input type="text" id = "lnInput" name = "txtName"><br>
+            Email<input type="text" id = "eInput" name = "txtName"><br>
+            Phone Number<input type="text" id = "pnInput" name = "txtName"><br>
+            Department<input type="text" id = "deptInput" name = "txtName"><br>
+            Job Title<input type="text" id = "jtInput" name = "txtName"><br>
+            <button>Save</button><br>
+        </form>
+
+        <table id = "printedInfo">
+            <th>First Name</th>
+            <th>Last Name</th>
+            <th>Email</th>
+            <th>Phone Number</th>
+            <th>Department</th>
+            <th>Job Title</th>
+        </table>
+
+
+        <script>
+            function handleSubmit(){
+                console.log("event occurred");
+                let userForm = document.getElementById("userInput");
+                let table = document.getElementById("printedInfo");
+                let row = table.insertRow(-1);
+                let firstName = row.insertCell(0);
+                let lastName = row.insertCell(1);
+                let email = row.insertCell(2);
+                let phone = row.insertCell(3);
+                let department = row.insertCell(4);
+                let jobTitle = row.insertCell(5);
+
+                firstName.innerText = "Hello"
+                lastName.innerText = "MY"
+
+
+
+            }
+        </script>
+        
+    </body>
